@@ -17,6 +17,11 @@ return this.http.post<UserLogin>('https://blogkev.herokuapp.com/usuarios/logar',
   cadastrar (user:User): Observable<User> {
 return this.http.post<User>('https://blogkev.herokuapp.com/usuarios/cadastrar', user)
   }
+
+getByIdUser(id: number): Observable<User>{
+  return this.http.get<User>(`https://blogkev.herokuapp.com/usuarios/id/${id}`)
+}
+  
   logado (){
     let ok: boolean = false 
     if (environment.token != ''){
