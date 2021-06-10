@@ -25,7 +25,7 @@ private route: ActivatedRoute
     if(environment.token == ''){
       this.router.navigate(['/entrar'])
     }
-this.idTema = this.route.snapshot.params["id"]
+this.idTema = this.route.snapshot.params['id']
 this.findByIdTema(this.idTema)
 
   }
